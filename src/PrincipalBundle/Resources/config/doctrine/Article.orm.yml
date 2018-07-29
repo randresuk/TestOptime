@@ -1,0 +1,49 @@
+PrincipalBundle\Entity\Article:
+    type: entity
+    table: article
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        description:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+        brand:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        category:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        price:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+    lifecycleCallbacks: {  }

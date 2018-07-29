@@ -1,0 +1,41 @@
+principal_homepage:
+    path:     /
+    defaults: { _controller: PrincipalBundle:Default:index }
+
+muestra:
+    path:     /muestra
+    defaults: { _controller: PrincipalBundle:Prueba:muestra }
+
+#registro de productos
+addFormat:
+    path:     /product
+    defaults: { _controller: PrincipalBundle:Format:addFormat }
+
+listFormat:
+    path:     /list
+    defaults: { _controller: PrincipalBundle:Format:list }
+
+delete_list:
+    path:     /deleteList/{id}
+    defaults: { _controller: PrincipalBundle:Format:deleteList  }
+
+edit_list:
+    path:     /editList/{id}
+    defaults: { _controller: PrincipalBundle:Format:editList }
+
+
+addCategory:
+    path:     /category
+    defaults: { _controller: PrincipalBundle:Category:addCategory }
+
+listCategory:
+    path:     /categorylist
+    defaults: { _controller: PrincipalBundle:Category:listCategory }
+
+delete_listcategory:
+    path:     /deleteListCategory/{id}
+    defaults: { _controller: PrincipalBundle:Category:deleteListCategory }
+
+edit_listcategory:
+    path:    /editListCategory/{id}
+    defaults: { _controller: PrincipalBundle:Category:editListCategory }    

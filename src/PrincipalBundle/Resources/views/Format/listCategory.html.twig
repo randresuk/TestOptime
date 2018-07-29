@@ -1,0 +1,54 @@
+{% extends "PrincipalBundle:Templates:layout2.html.twig" %}
+{% block title %}
+Lista
+{% endblock %}
+{% block body %}
+
+<div class="container">
+  <h2>Lista categorias</h2>
+    <hr>
+    <a href="{{path('addCategory')}}" class="btn btn-success">Nuevo Categoria</a>
+    </hr>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <th>id</th>
+            <th>codigo</th>
+            <th>nombre</th>
+            <th>descripcion</th>
+            <th>estado</th>
+            <th>opciones</th>
+        </thead>
+    </hr>
+        <tbody>
+            {%for a in lists%}
+            <tr>
+                <td>{{a.id}}</td>
+                <td>{{a.code}}</td>
+                <td>{{a.name}}</td>
+                <td>{{a.description}}</td>
+                {%if (a.state)==1 %}
+                <td>Activo</td>
+                {% else %}
+                <td>Inactivo</td>
+
+                {% endif %}
+                
+               
+                <td>
+                <a href="{{path('delete_listcategory',{id:a.id})}}" class="btn btn-success">
+                     <span class="glyphicon glyphicon-trash">Borrar</span>
+                </a>    
+
+                <a href="{{path('edit_listcategory',{id:a.id})}}" class="btn btn-info">
+                <span class="glyphicon glyphicon-edit">Editar</span>
+                </a>
+                
+                </td>
+            </tr>    
+            {% endfor %}
+        </tbody>    
+    </table>             
+</div>
+
+{% endblock %}
