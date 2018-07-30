@@ -1,6 +1,6 @@
 principal_homepage:
     path:     /
-    defaults: { _controller: PrincipalBundle:Default:index }
+    defaults: { _controller: PrincipalBundle:Format:list }
 
 muestra:
     path:     /muestra
